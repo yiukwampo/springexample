@@ -10,8 +10,11 @@ import com.springexample.demo.Dto.TestDto;
 import com.springexample.demo.Service.CalculateSumOfFruitReentrantLock;
 import com.springexample.demo.Service.CounterServiceSynchronized;
 
+import lombok.extern.slf4j.Slf4j;
+
 
 @RestController
+@Slf4j
 public class TestController {
 
     @Autowired
@@ -24,6 +27,7 @@ public class TestController {
     public ResponseEntity<Integer> calculateSumOfFruit(
       @RequestBody final TestDto testDto) {
 
+         log.info("calculateSumOfFruitLock: ...");
          if (testDto != null) {
                switch(testDto.getFruitType()){
                   case "1" : // apple
