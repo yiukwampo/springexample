@@ -10,9 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class CompScanController {
 
-   @GetMapping("/querycontroller") 
+   @GetMapping("/componentScanController") 
    public ResponseEntity<String> calculateSumOfFruit() {
-      log.info("querycontroller: ...");
+      log.info("componentScanController: ...");
          return ResponseEntity.ok("Test CompScanController");
    }
 
