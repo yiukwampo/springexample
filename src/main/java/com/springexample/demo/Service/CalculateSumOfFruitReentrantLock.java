@@ -19,6 +19,7 @@ public class CalculateSumOfFruitReentrantLock {
             lock.unlock();
         }
     }
+
     public int getCount() {
         int temp = 0;
         lock.lock();
